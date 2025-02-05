@@ -1,3 +1,10 @@
+:root {
+    --umbc-gold: #fdb515;
+    --umbc-white: #F4F6FF;
+    --dark-gray: #333;
+}
+
+
 * {
     box-sizing: border-box;
 }
@@ -19,7 +26,7 @@ body {
     justify-content: flex-start;
     gap: 3rem;
     align-items: center; /*center vertical alignment*/
-    background-color: #333;
+    background-color: black;
     color: white;
     height: 55px; /*fixed height for navbar*/
     margin: 0 !important;
@@ -51,7 +58,7 @@ body {
 }
 
 .navbar-links li:hover {
-    background-color: #555; /*background when hovering on links*/
+    background-color: var(--dark-gray); /*background when hovering on links*/
 }
 
 .toggle-button {
@@ -62,6 +69,12 @@ body {
     display: none; /*not displayed by default*/
     margin: 0 !important;
     padding: 0 !important;
+}
+
+.gold-stripe-header {
+    border: 3px solid var(--umbc-gold);
+    opacity: 1;
+    margin: 0;
 }
 
 .search-container {
@@ -107,6 +120,9 @@ body {
     display: none;
 }
 
+.offcanvas-end {
+    width: 350px !important;
+}
 
 #toggleOffcanvas {
     display: inline-block;
