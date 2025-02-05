@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link href="styles1.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="script1.js" defer></script>
+</head>
+<body>
+    <nav class="navigation-bar">
+        <div class="brand-title">Brand Name</div>
+        <a href="#" class="toggle-button" aria-expanded="false" aria-controls="nav-links">
+            <span class="visually-hidden">Toggle navigation menu</span>
+            <i class="bi bi-list"></i>
+        </a>
+        <div class="navbar-links" id="nav-links" role="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search">
+            <a href="#" class="search-toggle">
+                <i class="bi bi-search"></i>
+            </a>
+            <button type="button" class="back-button">
+                <i class="bi bi-arrow-left"></i>
+            </button>
+        </div>
+        <a class="btn" data-bs-toggle="offcanvas" href="#offcanvas-user-menu" role="button" id="toggleOffcanvas" aria-controls="offcanvas-user-menu">
+            <img src="./img_avatar.png" class="avatar">
+        </a>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas-user-menu">
+                <div class="row align-items-center text-center p-0 m-0" style="height: 55px;">
+                    <div class="col-2">
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="col-6"></div>
+                    <div class="col-4 d-flex justify-content-center gap-4">
+                        <button type="button" class="grid-button">
+                            <i class="bi bi-grid-3x3-gap-fill"></i>
+                        </button>
+                        <button type="button" class="avatar-button ps-1">
+                            <img src="./img_avatar.png" class="avatar-offcanvas">
+                        </button>
+                    </div>
+                    <!-- <div class="col-2">
+                        <button type="button" class="grid-button">
+                            <i class="bi bi-grid-3x3-gap-fill"></i>
+                        </button>
+                    </div>
+                    <div class="col-2">
+                        <button type="button" class="avatar-button">
+                            <img src="./img_avatar.png" class="avatar-offcanvas">
+                        </button>
+                        
+                    </div> -->
+                    <!-- <h5 class="offcanvas-title" id="offcanvasLabel">User Menu</h5> -->
+                    
+                </div>
+            <div class="offcanvas-body p-0">
+                <div class="background-image">
+                </div>
+                <div>...</div>
+            </div>
+        </div>
+    </nav>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

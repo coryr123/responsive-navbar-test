@@ -1,0 +1,297 @@
+* {
+    box-sizing: border-box;
+}
+
+/* .sr-only {
+    position: absolute;
+    transform: translateX(-10000px);
+} */
+
+body {
+    font-family: 'Roboto', sans-serif !important; 
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.navigation-bar {
+    display: flex; /*flexbox horizontal*/
+    /*justify-content: space-between;*/ /*pushes flex items as far apart from each other as possible*/
+    justify-content: flex-start;
+    gap: 3rem;
+    align-items: center; /*center vertical alignment*/
+    background-color: #333;
+    color: white;
+    height: 55px; /*fixed height for navbar*/
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    left: .5rem;
+    padding-left: .5rem;
+}
+
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex; /*display horizontal*/
+}
+
+.navbar-links li {
+    list-style: none; /*remove bullets*/
+}
+
+.navbar-links li a {
+    text-decoration: none; /*remove link underline*/
+    color: white;
+    padding: 1rem; /*space around the links*/
+    padding-bottom: .8rem;
+    display: block; /*links take up larger space*/
+}
+
+.navbar-links li:hover {
+    background-color: #555; /*background when hovering on links*/
+}
+
+.toggle-button {
+    color: white;
+    font-size: 2.25rem;
+    position: absolute; /*forced to left side of screen without messing with other elements*/
+    left: .5rem; /*push from the left*/
+    display: none; /*not displayed by default*/
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.search-container {
+    position: absolute; /*removes element from regular doc flow*/
+    right: 5rem; /*positioned 5rem units from the right side*/
+    top: .8rem;
+    display: flex;
+    /* background-color: white; */
+    width: 225px;
+    height: 30px;
+    /* border-radius: 12.5px; */
+    transition: 
+        width 0.3s;
+}
+
+.search-bar {
+    height: 1.75rem;
+    border-radius: 10px;
+    border: none;
+    text-align: left;
+    font-size: 1rem;
+    width: 225px;
+    padding-left: 2.5rem;
+    /**/
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' fill='%236c757d' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0'/%3E%3C/svg%3E");
+    background-position: center left 15px; /*[horizontal][vertical] -> center vertically, anchor left, offset 15px from left*/
+    background-repeat: no-repeat;
+    background-size: 17.5px 17.5px;
+}
+
+.search-bar::placeholder {
+    opacity: 0.5;
+}
+
+.search-toggle {
+    color: white;
+    font-size: 1.25rem;
+    position: absolute; /*forced to left side of screen without messing with other elements*/
+    /* position: relative; */
+    /* bottom: .2rem; */
+    right: 1rem;
+    /* top: .8rem; */
+    display: none;
+}
+
+
+#toggleOffcanvas {
+    display: inline-block;
+    position: absolute;
+    right: 1rem;
+    top: .55rem;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0;
+}
+
+.avatar {
+    /* display: inline-block;
+    position: absolute; */
+    /* right: 1rem; */
+    /* top: .55rem; */
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin: 0;
+    padding: 0;
+    /* vertical-align: middle; */
+}
+
+.back-button {
+    border: none;
+    font-size: 1.25rem;
+    background: none;
+    display: none;
+    position: relative;
+    left: .5rem;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+.offcanvas {
+    border: 0;
+}
+
+.avatar-offcanvas {
+    /* display: inline-block; */
+    /* position: absolute;
+    right: 1rem;
+    top: .55rem; */
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.btn-close {
+    padding: 0;
+    margin-bottom: 1px;
+    height: 35px;
+}
+
+.grid-button {
+    border: none;
+    font-size: 1.5rem;
+    background: none;
+}
+
+.avatar-button {
+    border: none;
+    background: none;
+    margin: 0;
+    margin-right: 1px;
+    padding: 0;
+}
+
+.background-image {
+    background-image: url(./umbc-background-image-25.png);
+    width: 97.5%;
+    height: 135px;
+    justify-content: center;
+    object-fit: scale-down;
+}
+/* ----------------------------------------------------------------------------------------------------- */
+/*media query for responsive navbar/toggle-button*/
+@media (width <= 992px) {
+    /* make toggle button appear */
+    .toggle-button {
+        /* display: block; */
+        display: flex;
+        padding: 0;
+        border: 0;
+        height: 55px;
+        background: none;
+        justify-content: center;
+        align-items: center;
+        /* top: .25rem; */
+    }
+
+    .brand-title {
+        position: relative;
+        left: 3rem;
+        top: .5rem;
+    }
+
+    .navbar-links {
+        /* display: none; */
+        margin: 0;
+        padding: 0;
+        position: relative;
+        top: -1.9rem;
+        width: 100%;
+        /*not visible until toggle button clicked*/
+        opacity: 0;
+        visibility: hidden;
+        transition: 
+            opacity 0.2s ease-in-out,
+            visibility 0s linear 0.2s;
+    }
+
+    .navigation-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        /* height: 166px; */
+        transition: height 0.2s ease-in-out;
+    }
+    /*active class for toggle event handling*/
+    .navigation-bar.active {
+        height: 175px;
+    }
+
+    .navbar-links ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links li {
+        text-align: center; /*centers link text*/
+    }
+
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+        transition:
+            opacity 0.2s ease-in-out,
+            visibility 0s linear ;
+    }
+
+}
+/* --------------------------------------------------------------------------------------------------- */
+
+@media (width <= 768px) {
+    /* search bar disappears */
+    .search-bar {
+        display: none;
+    }
+
+    /* search toggle icon replaces search bar */
+    .search-toggle {
+        display: block;
+    }
+    /*when clicking the search toggle, back-button, or search-button*/
+    .search-container.active{
+        display: inline-block;
+        width: 100dvw;
+        height: 55px;
+        border-radius: 0px;
+        background-color: white;
+        top: 0;
+        right: 0;
+    }
+    .search-toggle.active {
+        display: none;
+    }
+    .avatar.active {
+        display: none;
+    }
+    #toggleOffcanvas.active {
+        display: none;
+    }
+    .back-button.active {
+        display: flex;
+        align-items: center;
+    }
+}
